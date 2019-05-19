@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url('../font/Oswald-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url('../font/Roboto-Regular.ttf');
+}
+
+html {
+    color: rgba(0, 0, 0, 0.78);
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #eceff1;
+}
+
+nav {
+    overflow: auto;
+}
+nav .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.07);
+    background-color: white;
+    z-index: 98;
+    transition: 0.3s;
+}
+nav .navbar.hidden {
+    box-shadow: 0;
+    background-color: transparent;
+}
+nav .navbar .brand {
+    line-height: 70px;
+    display: none;
+}
+nav .navbar .brand img {
+    height: 60px;
+    float: left;
+    margin: 5px 0;
+}
+nav .navbar .brand div {
+    float: left;
+    padding: 14px 6px;
+}
+nav .navbar .brand div p {
+    line-height: 1.5rem;
+    font-size: 1.3rem;
+    font-family: "Oswald";
+}
+nav .navbar button#open {
+    background: transparent;
+    border: 0;
+    margin: 23.5px 0;
+    float: right;
+    cursor: pointer;
+}
+nav .navbar button#open img {
+    width: 20px;
+}
+nav .navbar.hidden button#open img {
+    filter: contrast(0%) brightness(100);
+}
+
+nav .sidenav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100vh;
+    background-color: white;
+    z-index: 99;
+}
+nav .sidenav .brand {
+    text-align: center;
+    font-family: "Oswald";
+    font-size: 1.8rem;
+    padding: 4.4rem 0 1.4rem;
+}
+nav .sidenav .brand img {
+    width: 120px;
+}
+nav .sidenav ul {
+    display: none;
+    list-style: none;
+}
+nav .sidenav ul li a {
+    display: block;
+    line-height: 3.5rem;
+    padding-left: 2rem;
+    color: rgba(0,0,0,0.7);
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav .sidenav ul li a:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+nav ul span#close {
+    display: none;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+
+header {
+    padding-top: 70px;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-image: url('../img/bg.JPG');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header .brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+header .brand img {
+    height: 180px;
+}
+header .brand p {
+    font-family: "Oswald";
+    font-size: 1.55rem;
+    color: white;
+}
+header span#scrollDown {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    cursor: pointer;
+}
+
+.container {
+    width: calc(100% - 30px);
+    margin: 0 15px;
+    overflow: auto;
+}
+
+section {
+    width: 100%;
+}
+
+section .header {
+    line-height: 70px;
+    font-size: 1.8rem;
+    font-family: "Oswald";
+    text-align: center;
+    position: relative;
+}
+section .header .border {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    width: 3rem;
+    height: 2px;
+    background-color: #1b5e20;
+}
+
+section#profil .content {
+    margin-top: 2rem;
+}
+section#profil .content article {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+section#profil .content article.visi p {
+    margin-top: 0.5rem;
+}
+section#profil .content article.misi ul {
+    list-style: none;
+    margin: 0 1rem;
+}
+section#profil .content article.misi ul li {
+    text-align: left;
+    margin: 0.5rem 0;
+}
+section#profil .content article.misi ul li:last-of-type {
+    margin-bottom: 2rem;
+}
+
+section#jurusan {
+    height: calc(100vh - 70px);
+}
+
+section#jurusan .item #open {
+    line-height: calc(100vh - 70px);
+}
+
+section#jurusan .item article {
+    display: none;
+}
+
+section#jurusan .header {
+    position: absolute;
+    color: white;
+    z-index: 97;
+    left: 50%;
+    transform: translate(-50%);
+}
+section#jurusan .item {
+    float: left;
+    position: relative;
+    width: 20%;
+    height: inherit;
+}
+section#jurusan .item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+section#jurusan .item.active img {
+}
+section#jurusan .item #open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+section#jurusan .item #close {
+    display: none;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+section#jurusan .item article {
+    position: absolute;
+    color: white;
+    text-align: center;
+    top: 0;
+    padding: 0 1rem;
+}
+section#jurusan .item h1 {
+    margin-bottom: 0.5rem;
+}
+section#jurusan .item ul {
+    list-style: none;
+}
+section#jurusan .item ul.kelas li {
+    display: inline-block;
+}
+section#jurusan .item ul.kelas li div:first-of-type {
+    width: 3rem;
+    line-height: 3rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 0.5rem 1rem;
+}
+section#jurusan .item p {
+    text-align: left;
+    margin: 0.8rem 0;
+}
+section#jurusan .item ul.kompetensi li {
+    text-align: left;
+}
+
+section#ekstra, section#kegiatan {
+    overflow: auto;
+}
+
+section#ekstra .item-container {
+    margin-top: 1.5rem;
+    width: 100%;
+    overflow: auto;
+}
+
+section#ekstra .item {
+    position: relative;
+    float: left;
+}
+
+section#ekstra .item h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 96;
+}
+
+section#ekstra .item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(75%);
+    transition: filter .4s;
+}
+
+section#ekstra .item:hover img {
+    filter: brightness(100%);
+}
+
+section#kegiatan .header {
+    line-height: 2.3rem;
+    padding: 16px 0;
+}
+section#kegiatan .item {
+    position: relative;
+    float: left;
+    width: calc(50% - 12px);
+    height: calc(100% - 143px);
+    margin: 24px 6px;
+}
+
+section#kegiatan .item .img {
+    filter: brightness(75%);
+    transition: filter .4s;
+}
+
+section#kegiatan .item .img img {
+    width: 100%;
+    min-height: 200px;
+    object-fit: cover;
+}
+
+section#kegiatan .item .title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+section#kegiatan .item .content {
+    line-height: 1.3;
+}
+
+footer {
+    width: 100%;
+    background-color: #263238;
+    color: white;
+}
+footer ul {
+    list-style: none;
+    margin: 1.2rem auto;
+}
+footer ul li {
+    margin: 0.2rem 0;
+    text-align: left;
+}
+footer ul li a {
+    color: white;
+}
+
+@media (max-width: 421px) {
+    html {
+        font-size: 14px;
+    }
+    section#ekstra .item {
+        width: 50%;
+        height: 250px;
+    }
+}
+
+@media (min-width: 422px) and (max-width: 767px) {
+    html {
+        font-size: 15px;
+    }
+    section#ekstra .item {
+        width: 50%;
+        height: 250px;
+    }
+    nav .sidenav .brand {
+        font-size: 1.4rem !important;
+        padding: 2.6rem 0 0.4rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 911px) {
+    html {
+        font-size: 16px;
+    }
+    nav .sidenav .brand {
+        font-size: 1.4rem !important;
+        padding: 2.6rem 0 0.4rem !important;
+    }
+    section#ekstra .item {
+        width: calc(100% / 3);
+        height: 250px;
+    }
+}
+
+@media (min-width: 912px) {
+    html {
+        font-size: 16px;
+    }
+    body {
+        padding-left: 300px;
+    }
+    nav .navbar {
+        display: none;
+    }
+    nav .sidenav {
+        width: 300px !important;
+        left: 0 !important;
+        right: auto;
+    }
+    nav .sidenav ul {
+        display: block !important;
+    }
+    nav .sidenav .brand {
+        font-size: 1.4rem !important;
+        padding: 1.4rem 0 !important;
+    }
+    header {
+        position: relative;
+        padding-top: 0 !important;
+        height: 100vh !important;
+    }
+    header .brand p {
+        font-size: 2rem !important;
+    }
+    section .header {
+        font-size: 2rem !important;
+        margin: 2rem 0;
+    }
+    section#profil .content article.misi ul {
+        list-style: none;
+        display: inline-block;
+    }
+    section#profil .content article.misi ul li {
+        text-align: left;
+        margin: 1rem 0;
+    }
+    section#jurusan {
+        position: relative;
+        height: 100vh;
+    }
+    section#jurusan .item article {
+        padding: 0 7rem;
+        width: calc(100% - 14rem);
+    }
+    section#ekstra .item {
+        width: calc(100% / 3);
+        height: 260px;
+    }
+    section#kegiatan .item {
+        width: calc(50% - 84px);
+        margin: 24px 42px;
+    }
+    section#kegiatan .item .img img {
+        height: 400px;
+    }
+    footer {
+        text-align: center;
+    }
+    footer ul {
+        display: inline-block;
+        vertical-align: top;
+    }
+    footer ul:first-of-type {
+        margin-right: 4rem;
+    }
+}
+
+@media (max-height: 576px) {
+    section#jurusan .item article {
+        padding-top: 6rem !important;
+    }
+}
+
+@media (min-height: 577px) {
+    section#profil {
+        height: 100vh;
+    }
+    section#jurusan .item article {
+        padding-top: 6rem;
+        padding-bottom: 2.7rem;
+    }
+    section#jurusan .item ul.kelas {
+        margin: 1rem 0;
+    }
+}
