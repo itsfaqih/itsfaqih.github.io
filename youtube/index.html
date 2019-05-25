@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Youtube</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,11 +14,11 @@
     <link rel="stylesheet" href="./css/slick-theme.css">
 </head>
 
-<body id="youtube-theme">
+<body id="youtube-theme" class="clearfix locked">
     <nav id="sidenav" class="collapse show">
         <div class="sidenav-header">
-            <button id="sidenav-btn" type="button" data-toggle="collapse" data-target="#sidenav"
-            aria-expanded="false" aria-controls="sidenav"><i class="material-icons">menu</i></button>
+            <button id="sidenav-btn" type="button" data-toggle="collapse" data-target="#sidenav" aria-expanded="false"
+                aria-controls="sidenav"><i class="material-icons">menu</i></button>
             <a href="#" class="sidenav-brand">Youtube</a>
         </div>
         <ul class="menu">
@@ -157,7 +157,10 @@
                     aria-expanded="false" aria-controls="sidenav"><i class="material-icons">menu</i></button>
                 <a class="navbar-brand" href="#">Youtube</a>
             </div>
-            <div class="col-6 d-md-block d-none">
+            <div id="searchbox" class="d-md-block col-md-4 col-lg-6 collapse">
+                <button id="searchbox-btn-back" class="d-md-none" type="button" data-toggle="collapse"
+                    data-target="#searchbox" aria-expanded="false" aria-controls="searchbox"><i
+                        class="material-icons">arrow_back</i></button>
                 <form class="form-inline my-2 my-lg-0 searchbox">
                     <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit"><i
@@ -166,12 +169,17 @@
             </div>
             <div>
                 <ul class="navbar-nav d-flex flex-row align-items-center">
-                    <li class="nav-item">
+                    <li class="d-md-none nav-item">
+                        <button id="searchbox-btn" type="button" data-toggle="collapse" data-target="#searchbox"
+                            aria-expanded="false" aria-controls="searchbox"><i
+                                class="material-icons">search</i></button>
+                    </li>
+                    <li class="nav-item ml-xs-1 ml-md-3">
                         <a class="nav-link pb-0" href="#"><i class="material-icons md-24">
                                 video_call
                             </i></a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown ml-xs-1  ml-md-3">
                         <a class="nav-link pb-0 dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <i class="material-icons md-24">
@@ -200,21 +208,16 @@
                             </a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link pb-0" href="#"><i class="material-icons md-24">
-                                message
-                            </i></a>
-                    </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown ml-xs-1  ml-md-3">
                         <a class="nav-link pb-0 dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="material-icons md-24">
-                                notifications
+                                message
                             </i>
                         </a>
                         <div class="dropdown-menu menu-left" aria-labelledby="navbarDropdown">
                             <div class="menu-title d-flex justify-content-between">
-                                <span>Notifications</span>
+                                <span>Messages</span>
                                 <a href="#">
                                     <i class="material-icons md-24">
                                         settings
@@ -223,10 +226,42 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link pb-0" href="#"><i class="material-icons md-36">
+                    <li class="nav-item dropdown ml-xs-1  ml-md-3">
+                        <a class="nav-link pb-0 dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons md-24">
+                                more_vert
+                            </i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                                <i class="material-icons">
+                                    accessibility
+                                </i>
+                                Action
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="material-icons">
+                                    accessibility
+                                </i>
+                                Another Action
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                <i class="material-icons">
+                                    accessibility
+                                </i>
+                                Something else here
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item ml-xs-1  ml-md-3">
+                        <a class="nav-link signIn-btn" href="#">
+                            <i class="material-icons md-24">
                                 account_circle
-                            </i></a>
+                            </i>
+                            <span>Sign in</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -278,39 +313,6 @@
                                     <div class="vid-title">
                                         Some kinda long title that I don't even remember it
                                     </div>
-                                    <div class="vid-menu dropdown">
-                                        <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="material-icons">more_vert</i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    watch_later
-                                                </i>
-                                                Save to Watch later
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    playlist_add
-                                                </i>
-                                                Save to playlist
-                                            </span>
-                                            <div class="dropdown-divider"></div>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    not_interested
-                                                </i>
-                                                Not interested
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    flag
-                                                </i>
-                                                Report
-                                            </span>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="vid-info">
                                     <span>A Person</span>
@@ -331,38 +333,25 @@
                                     <div class="vid-title">
                                         Some kinda long title that I don't even remember it
                                     </div>
-                                    <div class="vid-menu dropdown">
-                                        <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="material-icons">more_vert</i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    watch_later
-                                                </i>
-                                                Save to Watch later
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    playlist_add
-                                                </i>
-                                                Save to playlist
-                                            </span>
-                                            <div class="dropdown-divider"></div>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    not_interested
-                                                </i>
-                                                Not interested
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    flag
-                                                </i>
-                                                Report
-                                            </span>
-                                        </div>
+                                </div>
+                                <div class="vid-info">
+                                    <span>A Person</span>
+                                    <div>
+                                        <span>241K views</span>
+                                        <span>15 hours ago</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="vidlist-vid d-none d-md-block" href="#">
+                                <div class="vid-thumbnail">
+                                    <span class="vid-dur">
+                                        1:30:46
+                                    </span>
+                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
+                                </div>
+                                <div class="d-flex">
+                                    <div class="vid-title">
+                                        Some kinda long title that I don't even remember it
                                     </div>
                                 </div>
                                 <div class="vid-info">
@@ -384,39 +373,6 @@
                                     <div class="vid-title">
                                         Some kinda long title that I don't even remember it
                                     </div>
-                                    <div class="vid-menu dropdown">
-                                        <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="material-icons">more_vert</i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    watch_later
-                                                </i>
-                                                Save to Watch later
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    playlist_add
-                                                </i>
-                                                Save to playlist
-                                            </span>
-                                            <div class="dropdown-divider"></div>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    not_interested
-                                                </i>
-                                                Not interested
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    flag
-                                                </i>
-                                                Report
-                                            </span>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="vid-info">
                                     <span>A Person</span>
@@ -426,7 +382,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a class="vidlist-vid d-none d-md-block" href="#">
+                            <a class="vidlist-vid" href="#">
                                 <div class="vid-thumbnail">
                                     <span class="vid-dur">
                                         1:30:46
@@ -436,39 +392,6 @@
                                 <div class="d-flex">
                                     <div class="vid-title">
                                         Some kinda long title that I don't even remember it
-                                    </div>
-                                    <div class="vid-menu dropdown">
-                                        <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="material-icons">more_vert</i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    watch_later
-                                                </i>
-                                                Save to Watch later
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    playlist_add
-                                                </i>
-                                                Save to playlist
-                                            </span>
-                                            <div class="dropdown-divider"></div>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    not_interested
-                                                </i>
-                                                Not interested
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    flag
-                                                </i>
-                                                Report
-                                            </span>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="vid-info">
@@ -490,38 +413,25 @@
                                     <div class="vid-title">
                                         Some kinda long title that I don't even remember it
                                     </div>
-                                    <div class="vid-menu dropdown">
-                                        <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="material-icons">more_vert</i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    watch_later
-                                                </i>
-                                                Save to Watch later
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    playlist_add
-                                                </i>
-                                                Save to playlist
-                                            </span>
-                                            <div class="dropdown-divider"></div>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    not_interested
-                                                </i>
-                                                Not interested
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    flag
-                                                </i>
-                                                Report
-                                            </span>
-                                        </div>
+                                </div>
+                                <div class="vid-info">
+                                    <span>A Person</span>
+                                    <div>
+                                        <span>241K views</span>
+                                        <span>15 hours ago</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="vidlist-vid" href="#">
+                                <div class="vid-thumbnail">
+                                    <span class="vid-dur">
+                                        1:30:46
+                                    </span>
+                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
+                                </div>
+                                <div class="d-flex">
+                                    <div class="vid-title">
+                                        Some kinda long title that I don't even remember it
                                     </div>
                                 </div>
                                 <div class="vid-info">
@@ -543,39 +453,6 @@
                                     <div class="vid-title">
                                         Some kinda long title that I don't even remember it
                                     </div>
-                                    <div class="vid-menu dropdown">
-                                        <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="material-icons">more_vert</i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    watch_later
-                                                </i>
-                                                Save to Watch later
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    playlist_add
-                                                </i>
-                                                Save to playlist
-                                            </span>
-                                            <div class="dropdown-divider"></div>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    not_interested
-                                                </i>
-                                                Not interested
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    flag
-                                                </i>
-                                                Report
-                                            </span>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="vid-info">
                                     <span>A Person</span>
@@ -596,39 +473,6 @@
                                     <div class="vid-title">
                                         Some kinda long title that I don't even remember it
                                     </div>
-                                    <div class="vid-menu dropdown">
-                                        <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="material-icons">more_vert</i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    watch_later
-                                                </i>
-                                                Save to Watch later
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    playlist_add
-                                                </i>
-                                                Save to playlist
-                                            </span>
-                                            <div class="dropdown-divider"></div>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    not_interested
-                                                </i>
-                                                Not interested
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    flag
-                                                </i>
-                                                Report
-                                            </span>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="vid-info">
                                     <span>A Person</span>
@@ -648,145 +492,6 @@
                                 <div class="d-flex">
                                     <div class="vid-title">
                                         Some kinda long title that I don't even remember it
-                                    </div>
-                                    <div class="vid-menu dropdown">
-                                        <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="material-icons">more_vert</i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    watch_later
-                                                </i>
-                                                Save to Watch later
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    playlist_add
-                                                </i>
-                                                Save to playlist
-                                            </span>
-                                            <div class="dropdown-divider"></div>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    not_interested
-                                                </i>
-                                                Not interested
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    flag
-                                                </i>
-                                                Report
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="vid-info">
-                                    <span>A Person</span>
-                                    <div>
-                                        <span>241K views</span>
-                                        <span>15 hours ago</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="vidlist-vid" href="#">
-                                <div class="vid-thumbnail">
-                                    <span class="vid-dur">
-                                        1:30:46
-                                    </span>
-                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="vid-title">
-                                        Some kinda long title that I don't even remember it
-                                    </div>
-                                    <div class="vid-menu dropdown">
-                                        <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="material-icons">more_vert</i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    watch_later
-                                                </i>
-                                                Save to Watch later
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    playlist_add
-                                                </i>
-                                                Save to playlist
-                                            </span>
-                                            <div class="dropdown-divider"></div>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    not_interested
-                                                </i>
-                                                Not interested
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    flag
-                                                </i>
-                                                Report
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="vid-info">
-                                    <span>A Person</span>
-                                    <div>
-                                        <span>241K views</span>
-                                        <span>15 hours ago</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="vidlist-vid" href="#">
-                                <div class="vid-thumbnail">
-                                    <span class="vid-dur">
-                                        1:30:46
-                                    </span>
-                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="vid-title">
-                                        Some kinda long title that I don't even remember it
-                                    </div>
-                                    <div class="vid-menu dropdown">
-                                        <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="material-icons">more_vert</i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    watch_later
-                                                </i>
-                                                Save to Watch later
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    playlist_add
-                                                </i>
-                                                Save to playlist
-                                            </span>
-                                            <div class="dropdown-divider"></div>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    not_interested
-                                                </i>
-                                                Not interested
-                                            </span>
-                                            <span class="dropdown-item">
-                                                <i class="material-icons">
-                                                    flag
-                                                </i>
-                                                Report
-                                            </span>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="vid-info">
@@ -823,38 +528,25 @@
                             <div class="vid-title">
                                 Some kinda long title that I don't even remember it
                             </div>
-                            <div class="vid-menu dropdown">
-                                <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            watch_later
-                                        </i>
-                                        Save to Watch later
-                                    </span>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            playlist_add
-                                        </i>
-                                        Save to playlist
-                                    </span>
-                                    <div class="dropdown-divider"></div>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            not_interested
-                                        </i>
-                                        Not interested
-                                    </span>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            flag
-                                        </i>
-                                        Report
-                                    </span>
-                                </div>
+                        </div>
+                        <div class="vid-info">
+                            <span>A Person</span>
+                            <div>
+                                <span>241K views</span>
+                                <span>15 hours ago</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="vidlist-vid" href="#">
+                        <div class="vid-thumbnail">
+                            <span class="vid-dur">
+                                1:30:46
+                            </span>
+                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
+                        </div>
+                        <div class="d-flex">
+                            <div class="vid-title">
+                                Some kinda long title that I don't even remember it
                             </div>
                         </div>
                         <div class="vid-info">
@@ -876,38 +568,25 @@
                             <div class="vid-title">
                                 Some kinda long title that I don't even remember it
                             </div>
-                            <div class="vid-menu dropdown">
-                                <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            watch_later
-                                        </i>
-                                        Save to Watch later
-                                    </span>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            playlist_add
-                                        </i>
-                                        Save to playlist
-                                    </span>
-                                    <div class="dropdown-divider"></div>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            not_interested
-                                        </i>
-                                        Not interested
-                                    </span>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            flag
-                                        </i>
-                                        Report
-                                    </span>
-                                </div>
+                        </div>
+                        <div class="vid-info">
+                            <span>A Person</span>
+                            <div>
+                                <span>241K views</span>
+                                <span>15 hours ago</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="vidlist-vid" href="#">
+                        <div class="vid-thumbnail">
+                            <span class="vid-dur">
+                                1:30:46
+                            </span>
+                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
+                        </div>
+                        <div class="d-flex">
+                            <div class="vid-title">
+                                Some kinda long title that I don't even remember it
                             </div>
                         </div>
                         <div class="vid-info">
@@ -929,39 +608,6 @@
                             <div class="vid-title">
                                 Some kinda long title that I don't even remember it
                             </div>
-                            <div class="vid-menu dropdown">
-                                <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            watch_later
-                                        </i>
-                                        Save to Watch later
-                                    </span>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            playlist_add
-                                        </i>
-                                        Save to playlist
-                                    </span>
-                                    <div class="dropdown-divider"></div>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            not_interested
-                                        </i>
-                                        Not interested
-                                    </span>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            flag
-                                        </i>
-                                        Report
-                                    </span>
-                                </div>
-                            </div>
                         </div>
                         <div class="vid-info">
                             <span>A Person</span>
@@ -981,145 +627,6 @@
                         <div class="d-flex">
                             <div class="vid-title">
                                 Some kinda long title that I don't even remember it
-                            </div>
-                            <div class="vid-menu dropdown">
-                                <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            watch_later
-                                        </i>
-                                        Save to Watch later
-                                    </span>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            playlist_add
-                                        </i>
-                                        Save to playlist
-                                    </span>
-                                    <div class="dropdown-divider"></div>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            not_interested
-                                        </i>
-                                        Not interested
-                                    </span>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            flag
-                                        </i>
-                                        Report
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="vidlist-vid" href="#">
-                        <div class="vid-thumbnail">
-                            <span class="vid-dur">
-                                1:30:46
-                            </span>
-                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                        </div>
-                        <div class="d-flex">
-                            <div class="vid-title">
-                                Some kinda long title that I don't even remember it
-                            </div>
-                            <div class="vid-menu dropdown">
-                                <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            watch_later
-                                        </i>
-                                        Save to Watch later
-                                    </span>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            playlist_add
-                                        </i>
-                                        Save to playlist
-                                    </span>
-                                    <div class="dropdown-divider"></div>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            not_interested
-                                        </i>
-                                        Not interested
-                                    </span>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            flag
-                                        </i>
-                                        Report
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="vidlist-vid" href="#">
-                        <div class="vid-thumbnail">
-                            <span class="vid-dur">
-                                1:30:46
-                            </span>
-                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                        </div>
-                        <div class="d-flex">
-                            <div class="vid-title">
-                                Some kinda long title that I don't even remember it
-                            </div>
-                            <div class="vid-menu dropdown">
-                                <button class="nav-link dropdown-toggle transparent" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            watch_later
-                                        </i>
-                                        Save to Watch later
-                                    </span>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            playlist_add
-                                        </i>
-                                        Save to playlist
-                                    </span>
-                                    <div class="dropdown-divider"></div>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            not_interested
-                                        </i>
-                                        Not interested
-                                    </span>
-                                    <span class="dropdown-item">
-                                        <i class="material-icons">
-                                            flag
-                                        </i>
-                                        Report
-                                    </span>
-                                </div>
                             </div>
                         </div>
                         <div class="vid-info">
@@ -1140,6 +647,10 @@
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
+            $('#sidenav-btn, .overlay').click(function () {
+                $('body').toggleClass('locked')
+            })
+
             $('.slick-carousel').slick({
                 infinite: false,
                 slidesToShow: 5,
