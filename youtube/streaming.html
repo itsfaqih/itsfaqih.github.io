@@ -8,21 +8,22 @@
     <title>Youtube</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/streaming.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/slick-theme.css">
 </head>
 
-<body id="youtube-theme" class="clearfix locked">
-    <nav id="sidenav" class="collapse show">
+<body id="youtube-theme" class="clearfix full-sidenav">
+    <nav id="sidenav" class="collapse">
         <div class="sidenav-header">
             <button id="sidenav-btn" type="button" data-toggle="collapse" data-target="#sidenav" aria-expanded="false"
                 aria-controls="sidenav"><i class="material-icons">menu</i></button>
             <a href="#" class="sidenav-brand">Youtube</a>
         </div>
         <ul class="menu">
-            <li class="active">
+            <li>
                 <a href="#">
                     <i class="material-icons md-24">home</i><span>Home</span>
                 </a>
@@ -219,10 +220,10 @@
                             <div class="menu-title d-flex justify-content-between">
                                 <span>Messages</span>
                                 <!-- <a href="#">
-                                    <i class="material-icons md-24">
-                                        settings
-                                    </i>
-                                </a> -->
+                                        <i class="material-icons md-24">
+                                            settings
+                                        </i>
+                                    </a> -->
                             </div>
                         </div>
                     </li>
@@ -267,524 +268,528 @@
             </div>
         </div>
     </nav>
-    <nav id="sidenav-short">
-        <ul class="menu">
-            <li class="active">
-                <a href="#">
-                    <i class="material-icons md-24">home</i><span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="material-icons md-24">trending_up</i><span>Trending</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="material-icons md-24">subscriptions</i><span>Subscriptions</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="material-icons md-24">folder</i><span>Library</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <main>
-        <div class="mt-4">
-            <section class="vidlist clearfix">
-                <h6 class="vidlist-title">
-                    Trending
-                </h6>
-                <div class="vidlist-content slick-carousel">
-                    <a class="vidlist-vid" href="#">
+    <div id="streaming-container" class="d-flex flex-wrap flex-column">
+        <main id="streaming" class="no-sideshort full-divider">
+            <div class="mt-3">
+                <div id="video-stream">
+                    <iframe src="https://www.youtube.com/embed/wJnBTPUQS5A" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="mt-3">
+                <section id="video-info">
+                    <div class="video-title">
+                        Alan Walker - The Spectre
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="video-view">
+                            607,613,926 views
+                        </div>
+                        <div class="video-action">
+                            <ul class="d-flex flex-row">
+                                <li>
+                                    <button>
+                                        <i class="material-icons">
+                                            thumb_up
+                                        </i>
+                                        <span>4.8M</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <i class="material-icons">
+                                            thumb_down
+                                        </i>
+                                        <span>123K</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <i class="material-icons reverse">
+                                            reply
+                                        </i>
+                                        <span>SHARE</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <i class="material-icons">
+                                            playlist_add
+                                        </i>
+                                        <span>SAVE</span>
+                                    </button>
+                                </li>
+                                <li class="">
+                                    <button>
+                                        <i class="material-icons">
+                                            more_horiz
+                                        </i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider mt-2 mb-3"></div>
+                    <div class="video-user">
+                        <div class="d-flex flex-row">
+                            <a href="#" class="user-avatar">
+                                <img src="./img/avatar.jpg" alt="Alan Walker Avatar">
+                            </a>
+                            <div class="d-flex flex-column justify-content-center ml-3">
+                                <div class="user-name">
+                                    Alan Walker
+                                </div>
+                                <div class="video-publish">
+                                    Published on Sep 15, 2017
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="subs-btn">
+                                SUBSCRIBE 26M
+                            </button>
+                        </div>
+                    </div>
+                    <div class="video-desc mt-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae harum aliquam totam? Soluta nisi
+                        porro sunt, tenetur recusandae odit accusamus aspernatur explicabo vel, voluptatem vero at
+                        impedit,
+                        consequatur nesciunt numquam.
+                    </div>
+                </section>
+                <div class="dropdown-divider mt-4 mb-lg-4"></div>
+            </div>
+        </main>
+        <section id="video-comment">
+            <div class="d-flex flex-row align-items-center">
+                <div class="comment-count mr-4">
+                    8,648 Comments
+                </div>
+                <button class="simple-btn">
+                    <i class="material-icons">
+                        sort
+                    </i>
+                    <span>SORT BY</span>
+                </button>
+            </div>
+            <div class="vid-comment d-flex flex-row mt-4">
+                <div class="user-avatar">
+                    <img src="./img/avatar_default.png" alt="User Avatar">
+                </div>
+                <div class="user-comment ml-3">
+                    <form action="">
+                        <input type="text" placeholder="Add a public comment...">
+                    </form>
+                </div>
+            </div>
+            <div class="vid-comment d-flex flex-row mt-4">
+                <div class="user-avatar">
+                    <img src="./img/avatar_default.png" alt="User Avatar">
+                </div>
+                <div class="d-flex flex-column ml-3">
+                    <div class="d-flex flex-row">
+                        <div class="user-name">
+                            <a href="#">
+                                Bambang
+                            </a>
+                        </div>
+                        <div class="comment-publish">
+                            <a href="#">
+                                11 months ago
+                            </a>
+                        </div>
+                    </div>
+                    <div class="comment-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aperiam mollitia praesentium
+                        architecto voluptas modi dolorem omnis quasi voluptate iusto consequatur perferendis, ex velit
+                        illo
+                        perspiciatis sequi repudiandae, quaerat natus.
+                    </div>
+                    <div class="comment-action">
+                        <ul>
+                            <li>
+                                <button class="simple-btn small">
+                                    <i class="material-icons md-24">thumb_up</i>
+                                </button>
+                                <span>532</span>
+                            </li>
+                            <li>
+                                <button class="simple-btn small">
+                                    <i class="material-icons md-24">thumb_down</i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="simple-btn small"><span>REPLY</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-comment d-flex flex-row mt-4">
+                <div class="user-avatar">
+                    <img src="./img/avatar_default.png" alt="User Avatar">
+                </div>
+                <div class="d-flex flex-column ml-3">
+                    <div class="d-flex flex-row">
+                        <div class="user-name">
+                            <a href="#">
+                                Bambang
+                            </a>
+                        </div>
+                        <div class="comment-publish">
+                            <a href="#">
+                                11 months ago
+                            </a>
+                        </div>
+                    </div>
+                    <div class="comment-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aperiam mollitia praesentium
+                        architecto voluptas modi dolorem omnis quasi voluptate iusto consequatur perferendis, ex velit
+                        illo
+                        perspiciatis sequi repudiandae, quaerat natus.
+                    </div>
+                    <div class="comment-action">
+                        <ul>
+                            <li>
+                                <button class="simple-btn small">
+                                    <i class="material-icons md-24">thumb_up</i>
+                                </button>
+                                <span>532</span>
+                            </li>
+                            <li>
+                                <button class="simple-btn small">
+                                    <i class="material-icons md-24">thumb_down</i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="simple-btn small"><span>REPLY</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-comment d-flex flex-row mt-4">
+                <div class="user-avatar">
+                    <img src="./img/avatar_default.png" alt="User Avatar">
+                </div>
+                <div class="d-flex flex-column ml-3">
+                    <div class="d-flex flex-row">
+                        <div class="user-name">
+                            <a href="#">
+                                Bambang
+                            </a>
+                        </div>
+                        <div class="comment-publish">
+                            <a href="#">
+                                11 months ago
+                            </a>
+                        </div>
+                    </div>
+                    <div class="comment-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aperiam mollitia praesentium
+                        architecto voluptas modi dolorem omnis quasi voluptate iusto consequatur perferendis, ex velit
+                        illo
+                        perspiciatis sequi repudiandae, quaerat natus.
+                    </div>
+                    <div class="comment-action">
+                        <ul>
+                            <li>
+                                <button class="simple-btn small">
+                                    <i class="material-icons md-24">thumb_up</i>
+                                </button>
+                                <span>532</span>
+                            </li>
+                            <li>
+                                <button class="simple-btn small">
+                                    <i class="material-icons md-24">thumb_down</i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="simple-btn small"><span>REPLY</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="container">
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="title">
+                        Up next
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <a class="vidlist-vid-hor short" href="#">
                         <div class="vid-thumbnail">
                             <span class="vid-dur">
                                 1:30:46
                             </span>
                             <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
                         </div>
-                        <div class="d-flex">
+                        <div class="vid-text ml-2 d-flex flex-column">
                             <div class="vid-title">
                                 Some kinda long title that I don't even remember it
                             </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="vidlist-vid" href="#">
-                        <div class="vid-thumbnail">
-                            <span class="vid-dur">
-                                1:30:46
-                            </span>
-                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                        </div>
-                        <div class="d-flex">
-                            <div class="vid-title">
-                                Some kinda long title that I don't even remember it
-                            </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="vidlist-vid" href="#">
-                        <div class="vid-thumbnail">
-                            <span class="vid-dur">
-                                1:30:46
-                            </span>
-                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                        </div>
-                        <div class="d-flex">
-                            <div class="vid-title">
-                                Some kinda long title that I don't even remember it
-                            </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="vidlist-vid" href="#">
-                        <div class="vid-thumbnail">
-                            <span class="vid-dur">
-                                1:30:46
-                            </span>
-                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                        </div>
-                        <div class="d-flex">
-                            <div class="vid-title">
-                                Some kinda long title that I don't even remember it
-                            </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="vidlist-vid" href="#">
-                        <div class="vid-thumbnail">
-                            <span class="vid-dur">
-                                1:30:46
-                            </span>
-                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                        </div>
-                        <div class="d-flex">
-                            <div class="vid-title">
-                                Some kinda long title that I don't even remember it
-                            </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="vidlist-vid" href="#">
-                        <div class="vid-thumbnail">
-                            <span class="vid-dur">
-                                1:30:46
-                            </span>
-                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                        </div>
-                        <div class="d-flex">
-                            <div class="vid-title">
-                                Some kinda long title that I don't even remember it
-                            </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
+                            <div class="vid-info">
+                                <span>A Person</span>
+                                <div>
+                                    <span>241K views</span>
+                                </div>
                             </div>
                         </div>
                     </a>
                 </div>
-            </section>
-            <div class="dropdown-divider mb-4"></div>
-            <section class="vidlist mb-4 clearfix">
-                <div class="row">
-                    <div class="col-12">
-                        <h6 class="vidlist-title">
-                            Recommended
-                        </h6>
-                    </div>
-                    <div class="col-12">
-                        <div class="vidlist-content clearfix">
-                            <a class="vidlist-vid d-none d-lg-block" href="#">
-                                <div class="vid-thumbnail">
-                                    <span class="vid-dur">
-                                        1:30:46
-                                    </span>
-                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="vid-title">
-                                        Some kinda long title that I don't even remember it
-                                    </div>
-                                </div>
-                                <div class="vid-info">
-                                    <span>A Person</span>
-                                    <div>
-                                        <span>241K views</span>
-                                        <span>15 hours ago</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="vidlist-vid d-none d-lg-block" href="#">
-                                <div class="vid-thumbnail">
-                                    <span class="vid-dur">
-                                        1:30:46
-                                    </span>
-                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="vid-title">
-                                        Some kinda long title that I don't even remember it
-                                    </div>
-                                </div>
-                                <div class="vid-info">
-                                    <span>A Person</span>
-                                    <div>
-                                        <span>241K views</span>
-                                        <span>15 hours ago</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="vidlist-vid d-none d-md-block" href="#">
-                                <div class="vid-thumbnail">
-                                    <span class="vid-dur">
-                                        1:30:46
-                                    </span>
-                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="vid-title">
-                                        Some kinda long title that I don't even remember it
-                                    </div>
-                                </div>
-                                <div class="vid-info">
-                                    <span>A Person</span>
-                                    <div>
-                                        <span>241K views</span>
-                                        <span>15 hours ago</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="vidlist-vid d-none d-md-block" href="#">
-                                <div class="vid-thumbnail">
-                                    <span class="vid-dur">
-                                        1:30:46
-                                    </span>
-                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="vid-title">
-                                        Some kinda long title that I don't even remember it
-                                    </div>
-                                </div>
-                                <div class="vid-info">
-                                    <span>A Person</span>
-                                    <div>
-                                        <span>241K views</span>
-                                        <span>15 hours ago</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="vidlist-vid" href="#">
-                                <div class="vid-thumbnail">
-                                    <span class="vid-dur">
-                                        1:30:46
-                                    </span>
-                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="vid-title">
-                                        Some kinda long title that I don't even remember it
-                                    </div>
-                                </div>
-                                <div class="vid-info">
-                                    <span>A Person</span>
-                                    <div>
-                                        <span>241K views</span>
-                                        <span>15 hours ago</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="vidlist-vid" href="#">
-                                <div class="vid-thumbnail">
-                                    <span class="vid-dur">
-                                        1:30:46
-                                    </span>
-                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="vid-title">
-                                        Some kinda long title that I don't even remember it
-                                    </div>
-                                </div>
-                                <div class="vid-info">
-                                    <span>A Person</span>
-                                    <div>
-                                        <span>241K views</span>
-                                        <span>15 hours ago</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="vidlist-vid" href="#">
-                                <div class="vid-thumbnail">
-                                    <span class="vid-dur">
-                                        1:30:46
-                                    </span>
-                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="vid-title">
-                                        Some kinda long title that I don't even remember it
-                                    </div>
-                                </div>
-                                <div class="vid-info">
-                                    <span>A Person</span>
-                                    <div>
-                                        <span>241K views</span>
-                                        <span>15 hours ago</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="vidlist-vid" href="#">
-                                <div class="vid-thumbnail">
-                                    <span class="vid-dur">
-                                        1:30:46
-                                    </span>
-                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="vid-title">
-                                        Some kinda long title that I don't even remember it
-                                    </div>
-                                </div>
-                                <div class="vid-info">
-                                    <span>A Person</span>
-                                    <div>
-                                        <span>241K views</span>
-                                        <span>15 hours ago</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="vidlist-vid" href="#">
-                                <div class="vid-thumbnail">
-                                    <span class="vid-dur">
-                                        1:30:46
-                                    </span>
-                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="vid-title">
-                                        Some kinda long title that I don't even remember it
-                                    </div>
-                                </div>
-                                <div class="vid-info">
-                                    <span>A Person</span>
-                                    <div>
-                                        <span>241K views</span>
-                                        <span>15 hours ago</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="vidlist-vid" href="#">
-                                <div class="vid-thumbnail">
-                                    <span class="vid-dur">
-                                        1:30:46
-                                    </span>
-                                    <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="vid-title">
-                                        Some kinda long title that I don't even remember it
-                                    </div>
-                                </div>
-                                <div class="vid-info">
-                                    <span>A Person</span>
-                                    <div>
-                                        <span>241K views</span>
-                                        <span>15 hours ago</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button class="transparent">
-                            SHOW MORE
-                        </button>
-                    </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="dropdown-divider"></div>
                 </div>
-            </section>
-            <div class="dropdown-divider mt-4 mb-4"></div>
-            <section class="vidlist mb-4 clearfix">
-                <h6 class="vidlist-title">
-                    Recently uploaded
-                </h6>
-                <div class="vidlist-content slick-carousel">
-                    <a class="vidlist-vid" href="#">
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a class="vidlist-vid-hor short" href="#">
                         <div class="vid-thumbnail">
                             <span class="vid-dur">
                                 1:30:46
                             </span>
                             <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
                         </div>
-                        <div class="d-flex">
+                        <div class="vid-text ml-2 d-flex flex-column">
                             <div class="vid-title">
                                 Some kinda long title that I don't even remember it
                             </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="vidlist-vid" href="#">
-                        <div class="vid-thumbnail">
-                            <span class="vid-dur">
-                                1:30:46
-                            </span>
-                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                        </div>
-                        <div class="d-flex">
-                            <div class="vid-title">
-                                Some kinda long title that I don't even remember it
-                            </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="vidlist-vid" href="#">
-                        <div class="vid-thumbnail">
-                            <span class="vid-dur">
-                                1:30:46
-                            </span>
-                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                        </div>
-                        <div class="d-flex">
-                            <div class="vid-title">
-                                Some kinda long title that I don't even remember it
-                            </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="vidlist-vid" href="#">
-                        <div class="vid-thumbnail">
-                            <span class="vid-dur">
-                                1:30:46
-                            </span>
-                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                        </div>
-                        <div class="d-flex">
-                            <div class="vid-title">
-                                Some kinda long title that I don't even remember it
-                            </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="vidlist-vid" href="#">
-                        <div class="vid-thumbnail">
-                            <span class="vid-dur">
-                                1:30:46
-                            </span>
-                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                        </div>
-                        <div class="d-flex">
-                            <div class="vid-title">
-                                Some kinda long title that I don't even remember it
-                            </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="vidlist-vid" href="#">
-                        <div class="vid-thumbnail">
-                            <span class="vid-dur">
-                                1:30:46
-                            </span>
-                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
-                        </div>
-                        <div class="d-flex">
-                            <div class="vid-title">
-                                Some kinda long title that I don't even remember it
-                            </div>
-                        </div>
-                        <div class="vid-info">
-                            <span>A Person</span>
-                            <div>
-                                <span>241K views</span>
-                                <span>15 hours ago</span>
+                            <div class="vid-info">
+                                <span>A Person</span>
+                                <div>
+                                    <span>241K views</span>
+                                </div>
                             </div>
                         </div>
                     </a>
                 </div>
-            </section>
-        </div>
-    </main>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <a class="vidlist-vid-hor short" href="#">
+                        <div class="vid-thumbnail">
+                            <span class="vid-dur">
+                                1:30:46
+                            </span>
+                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
+                        </div>
+                        <div class="vid-text ml-2 d-flex flex-column">
+                            <div class="vid-title">
+                                Some kinda long title that I don't even remember it
+                            </div>
+                            <div class="vid-info">
+                                <span>A Person</span>
+                                <div>
+                                    <span>241K views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <a class="vidlist-vid-hor short" href="#">
+                        <div class="vid-thumbnail">
+                            <span class="vid-dur">
+                                1:30:46
+                            </span>
+                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
+                        </div>
+                        <div class="vid-text ml-2 d-flex flex-column">
+                            <div class="vid-title">
+                                Some kinda long title that I don't even remember it
+                            </div>
+                            <div class="vid-info">
+                                <span>A Person</span>
+                                <div>
+                                    <span>241K views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <a class="vidlist-vid-hor short" href="#">
+                        <div class="vid-thumbnail">
+                            <span class="vid-dur">
+                                1:30:46
+                            </span>
+                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
+                        </div>
+                        <div class="vid-text ml-2 d-flex flex-column">
+                            <div class="vid-title">
+                                Some kinda long title that I don't even remember it
+                            </div>
+                            <div class="vid-info">
+                                <span>A Person</span>
+                                <div>
+                                    <span>241K views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <a class="vidlist-vid-hor short" href="#">
+                        <div class="vid-thumbnail">
+                            <span class="vid-dur">
+                                1:30:46
+                            </span>
+                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
+                        </div>
+                        <div class="vid-text ml-2 d-flex flex-column">
+                            <div class="vid-title">
+                                Some kinda long title that I don't even remember it
+                            </div>
+                            <div class="vid-info">
+                                <span>A Person</span>
+                                <div>
+                                    <span>241K views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <a class="vidlist-vid-hor short" href="#">
+                        <div class="vid-thumbnail">
+                            <span class="vid-dur">
+                                1:30:46
+                            </span>
+                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
+                        </div>
+                        <div class="vid-text ml-2 d-flex flex-column">
+                            <div class="vid-title">
+                                Some kinda long title that I don't even remember it
+                            </div>
+                            <div class="vid-info">
+                                <span>A Person</span>
+                                <div>
+                                    <span>241K views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <a class="vidlist-vid-hor short" href="#">
+                        <div class="vid-thumbnail">
+                            <span class="vid-dur">
+                                1:30:46
+                            </span>
+                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
+                        </div>
+                        <div class="vid-text ml-2 d-flex flex-column">
+                            <div class="vid-title">
+                                Some kinda long title that I don't even remember it
+                            </div>
+                            <div class="vid-info">
+                                <span>A Person</span>
+                                <div>
+                                    <span>241K views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <a class="vidlist-vid-hor short" href="#">
+                        <div class="vid-thumbnail">
+                            <span class="vid-dur">
+                                1:30:46
+                            </span>
+                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
+                        </div>
+                        <div class="vid-text ml-2 d-flex flex-column">
+                            <div class="vid-title">
+                                Some kinda long title that I don't even remember it
+                            </div>
+                            <div class="vid-info">
+                                <span>A Person</span>
+                                <div>
+                                    <span>241K views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <a class="vidlist-vid-hor short" href="#">
+                        <div class="vid-thumbnail">
+                            <span class="vid-dur">
+                                1:30:46
+                            </span>
+                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
+                        </div>
+                        <div class="vid-text ml-2 d-flex flex-column">
+                            <div class="vid-title">
+                                Some kinda long title that I don't even remember it
+                            </div>
+                            <div class="vid-info">
+                                <span>A Person</span>
+                                <div>
+                                    <span>241K views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <a class="vidlist-vid-hor short" href="#">
+                        <div class="vid-thumbnail">
+                            <span class="vid-dur">
+                                1:30:46
+                            </span>
+                            <img src="./img/faiz-azhar-landscapefin.jpg" alt="The thumbnail">
+                        </div>
+                        <div class="vid-text ml-2 d-flex flex-column">
+                            <div class="vid-title">
+                                Some kinda long title that I don't even remember it
+                            </div>
+                            <div class="vid-info">
+                                <span>A Person</span>
+                                <div>
+                                    <span>241K views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
     <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="./js/popper.min.js"></script>
     <script type="text/javascript" src="./js/slick.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            if (window.matchMedia("(max-width: 1141px)").matches) {
-                $('#sidenav').attr('class', 'collapse')
-                $('body').attr('class', '')
-            } else {
-                $('#sidenav').attr('class', 'collapse show')
-            }
-
             $('#sidenav-btn, .overlay').click(function () {
                 $('body').toggleClass('locked')
-                if(!$('body').hasClass('locked')) {
+                if (!$('body').hasClass('locked')) {
                     $('#sidenav').scrollIntoView()
                 }
             })
