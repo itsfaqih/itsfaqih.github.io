@@ -472,7 +472,7 @@ body#youtube-theme {
     color: rgba(0, 0, 0, .7);
 }
 
-#youtube-theme .vid-title, #youtube-theme .vid-desc, #youtube-theme #video-info .video-desc, #youtube-theme #video-comment .comment-text {
+#youtube-theme .vid-title, #youtube-theme .vid-desc, #youtube-theme #video-info .video-desc p, #youtube-theme #video-comment .comment-text {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -482,8 +482,16 @@ body#youtube-theme {
     -webkit-line-clamp: 2;
 }
 
-#youtube-theme #video-info .video-desc {
+#youtube-theme #video-info .video-desc p {
     -webkit-line-clamp: 3;
+}
+
+#youtube-theme #video-info .video-desc p:nth-of-type(n+2) {
+    display: none;
+}
+
+#youtube-theme #video-info .video-desc p:nth-of-type(n+2).show {
+    display: block;
 }
 
 #youtube-theme #video-comment .comment-text {
