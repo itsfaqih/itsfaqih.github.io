@@ -776,6 +776,13 @@
     <script type="text/javascript" src="./js/main.js"></script>
     <script>
         $(document).ready(function () {
+            $('#sidenav-btn, .overlay').click(function () {
+                $('body').toggleClass('locked')
+                if (!$('body').hasClass('locked')) {
+                    $('#sidenav').scrollIntoView()
+                }
+            })
+
             $('.slick-carousel').slick({
                 infinite: false,
                 slidesToShow: 5,
@@ -809,8 +816,8 @@
                 variableWidth: true,
                 prevArrow: `<button type="button" class="slick-prev"><i class="material-icons">navigate_before</i></button>`,
                 nextArrow: `<button type="button" class="slick-next"><i class="material-icons">navigate_next</i></button>`,
-            });
-        });
+            })
+        })
     </script>
 </body>
 

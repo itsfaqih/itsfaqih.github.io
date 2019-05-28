@@ -486,6 +486,10 @@ body#youtube-theme {
     -webkit-line-clamp: 3;
 }
 
+#youtube-theme #video-info .video-desc p.show {
+    -webkit-line-clamp: unset;
+}
+
 #youtube-theme #video-info .video-desc p:nth-of-type(n+2) {
     display: none;
 }

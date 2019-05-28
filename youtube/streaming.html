@@ -858,7 +858,16 @@
     <script type="text/javascript" src="./js/slick.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/textcut.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#sidenav-btn, .overlay').click(function () {
+                $('body').toggleClass('locked')
+                if (!$('body').hasClass('locked')) {
+                    $('#sidenav').scrollIntoView()
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>
