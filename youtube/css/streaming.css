@@ -138,6 +138,10 @@
     margin-left: calc(1rem + 48px);
 }
 
+#youtube-theme #video-info .video-desc .video-publish {
+    display: none;
+}
+
 #youtube-theme .simple-btn {
     display: flex;
     align-items: center;
@@ -196,13 +200,52 @@
 
 @media only screen and (min-width: 0) and (max-width: 686px) {
     #youtube-theme #video-stream {
-        width: calc(100% - 40px);
+        width: 100%;
         height: 270px;
-        margin: auto;
     }
 
     #youtube-theme main.no-sideshort {
         padding-left: 2rem !important;
+    }
+
+    #youtube-theme #video-info .video-view {
+        width: 100%;
+    }
+
+    #youtube-theme #video-info .video-more {
+        justify-content: unset;
+        flex-direction: column;
+    }
+
+    #youtube-theme #video-info .video-user .video-publish {
+        display: none;
+    }
+
+    #youtube-theme #video-info .video-user~.dropdown-divider, #youtube-theme #video-info .video-desc .video-publish {
+        display: block;
+    }
+
+    #youtube-theme #video-info .video-action {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    #youtube-theme #video-info .video-action ul {
+        justify-content: space-between;
+    }
+
+    #youtube-theme #video-info .video-action button {
+        padding: 6px 8px;
+        flex-direction: column;
+    }
+
+    #youtube-theme #video-info .video-action button span {
+        margin-top: 6px;
+        margin-left: 0;
+    }
+
+    #youtube-theme #video-info .video-desc {
+        margin-left: 0;
     }
 
     #youtube-theme #video-comment {
@@ -227,9 +270,8 @@
 
 @media only screen and (min-width: 687px) and (max-width: 763px) {
     #youtube-theme #video-stream {
-        width: calc(100% - 40px);
+        width: 100%;
         height: 400px;
-        margin: auto;
     }
 
     #youtube-theme main.no-sideshort {
@@ -257,9 +299,8 @@
 
 @media only screen and (min-width: 764px) and (max-width: 973px) {
     #youtube-theme #video-stream {
-        width: calc(100% - 140px);
+        width: 100%;
         height: 360px;
-        margin: auto;
     }
 
     #youtube-theme main.no-sideshort {
@@ -287,9 +328,8 @@
 
 @media only screen and (min-width: 974px) and (max-width: 1141px) {
     #youtube-theme #video-stream {
-        width: calc(100% - 90px);
+        width: 100%;
         height: 390px;
-        margin: auto;
     }
 
     #youtube-theme main.no-sideshort {
@@ -398,11 +438,7 @@
         display: none;
     }
 
-    #youtube-theme #video-info .video-user~.dropdown-divider {
-        display: block;
-    }
-
-    #youtube-theme #video-info .video-desc .video-publish {
+    #youtube-theme #video-info .video-user~.dropdown-divider, #youtube-theme #video-info .video-desc .video-publish {
         display: block;
     }
 
@@ -415,6 +451,29 @@
         flex-direction: column;
     }
 
+    #youtube-theme #video-info .video-action {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    #youtube-theme #video-info .video-action ul {
+        justify-content: space-between;
+    }
+
+    #youtube-theme #video-info .video-action button {
+        padding: 6px 8px;
+        flex-direction: column;
+    }
+
+    #youtube-theme #video-info .video-action button span {
+        margin-top: 6px;
+        margin-left: 0;
+    }
+
+    #youtube-theme #video-info .video-desc {
+        margin-left: 0;
+    }
+
     #youtube-theme aside {
         padding-right: 1rem;
         padding-left: 1rem;
@@ -423,9 +482,5 @@
     #youtube-theme #video-comment {
         padding-right: 1rem;
         padding-left: 1rem;
-    }
-
-    #youtube-theme #video-info .video-desc {
-        margin-left: 0;
     }
 }
