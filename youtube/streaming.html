@@ -187,7 +187,7 @@
                                 apps
                             </i>
                         </a>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
                             <a class="dropdown-item" href="#">
                                 <i class="material-icons">
                                     accessibility
@@ -234,7 +234,7 @@
                                 more_vert
                             </i>
                         </a>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
                             <a class="dropdown-item" href="#">
                                 <i class="material-icons">
                                     accessibility
@@ -305,12 +305,31 @@
                                     </button>
                                 </li>
                                 <li>
-                                    <button>
+                                    <button data-toggle="modal" data-target="#shareModal">
                                         <i class="material-icons reverse">
                                             reply
                                         </i>
                                         <span>SHARE</span>
                                     </button>
+                                    <div class="modal fade" id="shareModal" tabindex="-1" role="dialog"
+                                        aria-labelledby="shareModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header d-flex align-items-center">
+                                                    <h5 class="modal-title" id="shareModalLabel">Share</h5>
+                                                    <button type="button" class="close d-flex align-items-center"
+                                                        data-dismiss="modal" aria-label="Close">
+                                                        <i class="material-icons">
+                                                            close
+                                                        </i>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Share this video
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li>
                                     <button>
@@ -320,12 +339,34 @@
                                         <span>SAVE</span>
                                     </button>
                                 </li>
-                                <li class="">
-                                    <button>
+                                <li class="dropdown">
+                                    <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
                                         <i class="material-icons">
                                             more_horiz
                                         </i>
                                     </button>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                                        <a class="dropdown-item" href="#">
+                                            <i class="material-icons">
+                                                accessibility
+                                            </i>
+                                            Action
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="material-icons">
+                                                accessibility
+                                            </i>
+                                            Another Action
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="material-icons">
+                                                accessibility
+                                            </i>
+                                            Something else here
+                                        </a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -356,10 +397,37 @@
                         <div class="video-publish mb-3">
                             Published on Sep 15, 2017
                         </div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae harum aliquam totam? Soluta nisi
-                        porro sunt, tenetur recusandae odit accusamus aspernatur explicabo vel, voluptatem vero at
-                        impedit,
-                        consequatur nesciunt numquam.
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae harum aliquam totam? Soluta
+                            nisi
+                            porro sunt, tenetur recusandae odit accusamus aspernatur explicabo vel, voluptatem vero at
+                            impedit,
+                            consequatur nesciunt numquam.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae harum aliquam totam? Soluta
+                            nisi
+                            porro sunt, tenetur recusandae odit accusamus aspernatur explicabo vel, voluptatem vero at
+                            impedit,
+                            consequatur nesciunt numquam.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae harum aliquam totam? Soluta
+                            nisi
+                            porro sunt, tenetur recusandae odit accusamus aspernatur explicabo vel, voluptatem vero at
+                            impedit,
+                            consequatur nesciunt numquam.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae harum aliquam totam? Soluta
+                            nisi
+                            porro sunt, tenetur recusandae odit accusamus aspernatur explicabo vel, voluptatem vero at
+                            impedit,
+                            consequatur nesciunt numquam.
+                        </p>
+                        <button class="textcut-btn simple-btn">
+                            <span>SHOW MORE</span>
+                        </button>
                     </div>
                 </section>
                 <div class="dropdown-divider mt-4 mb-lg-4"></div>
@@ -789,51 +857,8 @@
     <script type="text/javascript" src="./js/popper.min.js"></script>
     <script type="text/javascript" src="./js/slick.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#sidenav-btn, .overlay').click(function () {
-                $('body').toggleClass('locked')
-                if (!$('body').hasClass('locked')) {
-                    $('#sidenav').scrollIntoView()
-                }
-            })
-
-            $('.slick-carousel').slick({
-                infinite: false,
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                responsive: [{
-                        breakpoint: 445,
-                        settings: {
-                            slidesToShow: 1,
-                            variableWidth: false
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 3,
-                        }
-                    },
-                    {
-                        breakpoint: 1140,
-                        settings: {
-                            slidesToShow: 4,
-                        }
-                    }
-                ],
-                variableWidth: true,
-                prevArrow: `<button type="button" class="slick-prev"><i class="material-icons">navigate_before</i></button>`,
-                nextArrow: `<button type="button" class="slick-next"><i class="material-icons">navigate_next</i></button>`,
-            });
-        });
-    </script>
+    <script type="text/javascript" src="./js/textcut.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>

@@ -186,7 +186,7 @@
                                     apps
                                 </i>
                             </a>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
                                 <a class="dropdown-item" href="#">
                                     <i class="material-icons">
                                         accessibility
@@ -233,7 +233,7 @@
                                     more_vert
                                 </i>
                             </a>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
                                 <a class="dropdown-item" href="#">
                                     <i class="material-icons">
                                         accessibility
@@ -366,58 +366,7 @@
     <script type="text/javascript" src="./js/popper.min.js"></script>
     <script type="text/javascript" src="./js/slick.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
-    <script>
-            $(document).ready(function () {
-                if (window.matchMedia("(max-width: 1141px)").matches) {
-                    $('#sidenav').attr('class', 'collapse')
-                    $('body').attr('class', '')
-                } else {
-                    $('#sidenav').attr('class', 'collapse show')
-                }
-    
-                $('#sidenav-btn, .overlay').click(function () {
-                    $('body').toggleClass('locked')
-                    if(!$('body').hasClass('locked')) {
-                        $('#sidenav').scrollIntoView()
-                    }
-                })
-    
-                $('.slick-carousel').slick({
-                    infinite: false,
-                    slidesToShow: 5,
-                    slidesToScroll: 1,
-                    responsive: [{
-                            breakpoint: 445,
-                            settings: {
-                                slidesToShow: 1,
-                                variableWidth: false
-                            }
-                        },
-                        {
-                            breakpoint: 768,
-                            settings: {
-                                slidesToShow: 2,
-                            }
-                        },
-                        {
-                            breakpoint: 992,
-                            settings: {
-                                slidesToShow: 3,
-                            }
-                        },
-                        {
-                            breakpoint: 1140,
-                            settings: {
-                                slidesToShow: 4,
-                            }
-                        }
-                    ],
-                    variableWidth: true,
-                    prevArrow: `<button type="button" class="slick-prev"><i class="material-icons">navigate_before</i></button>`,
-                    nextArrow: `<button type="button" class="slick-next"><i class="material-icons">navigate_next</i></button>`,
-                });
-            });
-        </script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>
